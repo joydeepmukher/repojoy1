@@ -1,0 +1,13 @@
+resources:
+- name: mck_pipeline
+  type: git
+  source:
+    uri: https://github.com/joydeepmukher/repojoy1.git
+    branch: master
+    
+jobs:
+- name: pull_resources_joy
+  plan:
+  - get: mck_pipeline
+  - task: task_pull
+    file: mck_pipeline/output.yml
