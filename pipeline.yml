@@ -9,5 +9,6 @@ jobs:
 - name: pull_resources_joy
   plan:
   - get: mck_pipeline
+    trigger: true
   - task: task_pull
     file: mck_pipeline/output.yml
